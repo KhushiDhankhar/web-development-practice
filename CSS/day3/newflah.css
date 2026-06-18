@@ -1,0 +1,26 @@
+#id2{
+    background-color: blue;
+    position: relative;
+    height : 180px;
+}
+
+#flag{
+    height : 350px;
+    width :600px;
+}
+
+#container{
+    background-color: red;
+    height : 120px;
+    box-sizing : border-box;
+}
+
+#circle{
+     height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    left: 215px;
+    top: 15px;
+}

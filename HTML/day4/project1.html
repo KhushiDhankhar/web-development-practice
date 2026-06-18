@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form for senior web developer</title>
+    </head>
+<body>
+    <form>
+        <hr>
+        <h1>Job Application: Senior Web Developer</h1>
+        <p> Thank you for your interest in the Senior Web Developer position at our company. Please fill out the form below to submit your application.</p>
+        <hr>
+
+        <h2>Personal Information</h2>
+        <label for = "name">Full Name:</label><br>
+        <input type = "text" name = "name" id = "name" required>
+        <br><br>
+        <label for = "email">Email Address:</label><br>
+        <input type = "email" name = "email" id = "email" required>
+        <br><br>    
+        <label for = "phone">Phone Number:</label><br>
+        <input type = "tel" name = "phone" id = "phone" minlength = "10" maxlength = "10" required>
+        <br><br>
+        <label for = "linkedin">LinkedIn Profile:</label><br>
+        <input type = "url" name = "linkedin" id = "linkedin" placeholder="https://www.linkedin.com/in/yourname" required>
+        <br><br>
+
+        <hr>
+        <h2>Professional Experience</h2>
+
+        <label for = "resume">Upload your Resume(PDF or DOCX):</label><br>
+        <input type = "file" name = "resume" id = "resume" accept=".pdf, .doc, .docx" required>
+        <br><br>
+        <label for = "CoverLetter ">Cover Letter:</label><br>
+        <textarea name = "CoverLetter" id = "CoverLetter" rows = "5" cols = "40" placeholder = "tell us why you are a great fit for this role..." required></textarea>
+        <br><br>
+
+        
+        <label for = "experience">Years of Experience:</label><br>
+        <input type = "number" name = "experience" id = "experience" min = "0" max = "50" required>
+        <br><br>
+
+        <label for = "date-join">Earliest Possible Start Date:</label><br>
+        <input type = "date" name = "date-join" id = "date-join" required>
+
+        <br><br>
+        <hr>
+
+        <h2>Skills and Availability</h2>
+        <label for = "skills">Primary Skillset(choose one):</label><br>
+        <input type = "radio" name = "skills" id = "frontend" value = "frontend" required>
+        <label for = "frontend">Frontend Development</label><br>    
+        <input type = "radio" name = "skills" id = "backend" value = "backend" required>
+        <label for = "backend">Backend Development</label><br>      
+        <input type = "radio" name = "skills" id = "fullstack" value = "fullstack" required>
+        <label for = "fullstack">Full Stack Development</label><br>
+        <br><br>
+
+        <label for = "additional_skills">Additional Skills(select all that apply):</label><br>
+        <input type = "checkbox" name = "additional_skills" id = "React" value = "React">
+        <label for = "React">React</label><br>
+        <input type = "checkbox" name = "additional_skills" id = "Node.js" value = "Node.js">
+        <label for = "Node.js">Node.js</label><br>
+        <input type = "checkbox" name = "additional_skills" id = "database" value = "database">
+        <label for = "database">Database Management</label><br>
+        <input type = "checkbox" name = "additional_skills" id = "cloud" value = "cloud">
+        <label for = "cloud">Cloud/DevOps</label><br>
+        <br><br>
+
+        <label for = "availability">Preferred work type</label><br>
+        <select name = "availability" id = "availability">
+            <option value = "Full-time">Full-time</option>
+            <option value = "part-time">Part-time</option>
+            <option value = "remote">Remote</option>
+            <option value = "freelance">Freelance</option>   
+        </select>
+
+        <br><br>
+        <hr>
+        <h2>Final Confirmation</h2>
+        <input type = "checkbox" name = "confirmation" id = "confirmation" required>
+        <label for = "confirmation">I am legally authorized to work in this country.</label><br>
+        
+        <br><br>
+
+        <label for ="how">How did you hear about this job opening?</label><br>
+        <input type = "text" name = "how" id = "how" placeholder = "e.g., LinkedIn, Company Website, Referral..." required>
+        <br><br>
+
+
+        <button type = "submit" value = "Submit Application">Submit Application</button>
+        <button type = "reset" value = "Clear Form">Clear Form</button>
+    </form>
+</html>

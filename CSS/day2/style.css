@@ -1,0 +1,36 @@
+h1{
+    background-color :blanchedalmond;
+    /* border-width : 5px;
+    border-style : dashed;
+    border-color : rgb(234, 137, 10); */
+
+    border : 5px dashed rgb(234, 137, 10) ;
+    height : 100px;
+    font-size : 60px;
+    align-content: center;
+    padding : 20px;
+    margin : 20px;
+    border-radius : 20px;
+    /* font-display: fallback; */
+
+}
+
+h2{
+    background-color: pink;
+    border : 2px solid blue;
+    padding : 10px;
+    margin : 20px;
+}
+
+p{
+    background-color: rgb(246, 135, 154);
+    border : 2px solid rgb(13, 13, 253);
+    padding : 15px;
+    margin : 20px;
+
+}
+
+/* inline element : anchor, span
+block element : div,h1,h2,p */
+
+/* span: for applying properties to specific content of p tag or any other tag  */

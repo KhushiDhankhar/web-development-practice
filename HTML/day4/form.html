@@ -1,0 +1,124 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title> 
+
+</head>
+<body>
+
+    <form>
+        <h1>University Registration Form</h1>
+        <p>Please fill out the form below to register.</p>
+        <hr>
+
+        <h2>Personal Information</h2>
+
+        <label for = "firstname">First Name:</label>
+        <input type = "text" name = "firstname" id = "firstname" placeholder = "e.g., Arjun" required>
+        <br><br>
+
+        <label for = "lastname">Last Name:</label>
+        <input type = "text" name = "lastname" id = "lastname" placeholder = "e.g., Kumar">
+        <br><br>
+
+        <label for = "dob">Date of Birth:</label>
+        <input type = "date" name = "dob" id = "dob" required>
+        <br><br>
+
+        <label for ="gender">Gender:</label><br>
+        <input type = "radio" name = "gender" id = "male" value = "male" required>
+        <label for = "male">Male</label>
+        <br>
+        <input type = "radio" name = "gender" id = "female" value = "female" required>
+        <label for = "female">Female</label>
+        <br>
+        <input type = "radio" name = "gender" id = "other" value = "other" required>
+        <label for = "other">Other</label>
+        <br><br>
+
+        <label for = "photo">Upload Photo:</label>
+        <input type = "file" name = "photo" id = "photo">
+        <br><br>
+
+        <hr>
+        <h2>Contact Information</h2>
+        <label for = "email">Email Address:</label>
+        <input type = "email" name = "email" id = "email" placeholder = "you@example.com" required>
+        <br><br>
+
+        <label for = "phone">Phone Number:</label>
+        <input type = "tel" name = "phone" id = "phone" minlength = "10" maxlength = "10" placeholder = "e.g., 9876543210" required>
+        <br><br>
+
+        <label for = "address">Address:</label><br>
+        <textarea name = "address" id = "address" rows = "4" cols = "30" placeholder = "Street Address , City , State, ZIP Code" required></textarea>
+        <br><br>
+
+        <hr>
+        <h2>Academic Information</h2>
+        <label for = "course">Course:</label>
+        <select name = "course" id = "course">
+            <option value = "choose a course">--Choose a course --</option>
+            <option value = "computer_science">Computer Science</option>
+            <option value = "business_administration">Business Administration</option>
+            <option value = "psychology">Psychology</option>
+            <option value = "engineering">Engineering</option>
+        </select>
+        <br><br>    
+
+        <label >Extra Curricular Activities:</label><br>
+
+        <input type = "checkbox" name = "extracurricular activities" id = "extra" value = "sports">
+        <label for = "extra">Sports</label>
+        <br>
+        <input type = "checkbox" name = "extracurricular activities" id = "music_&_art" value = "music_&_art">
+        <label for = "music_&_art">Music & Art</label>
+        <br>
+        <input type = "checkbox" name = "extracurricular activities" id = "tech" value = "technology">
+        <label for = "tech">Technology club</label>
+        <br>
+        <input type = "checkbox" name = "extracurricular activities" id = "volunteering" value = "volunteering">
+        <label for = "volunteering">Volunteering</label>
+        
+        <br><br>
+        <hr>
+
+        <h2>Create your account</h2>
+        <label for = "password">create a password:</label>
+        <input type = "password" name = "password" id = "password" minlength = "8" placeholder = "Must be at least 8 characters long" required>
+        <br><br>
+        <label for = "security_question">security question:</label>
+        <select name = "security_question" id = "security_question">
+            <option value = "pet_name">What is your pet's name?</option>
+            <option value = "mother_maiden_name">What is your mother's maiden name?</option>
+            <option value = "first_school">What was the name of your first school?</option>
+            <option value = "favorite_color">What is your favorite color?</option>
+        </select>
+        <br><br>
+        <label for = "security_answer">answer:</label>
+        <input type = "text" name = "security_answer" id = "security_answer">
+        <br><br>
+
+        <input type ="checkbox" name = "terms" id = "terms" required>
+        <label for = "terms">I agree to the terms and conditions</label>
+
+        <br><br>
+        <label for = "favcolor">Select your favorite color:</label>
+        <input type = "color" name = "favcolor" id = "favcolor" value = "#000000">
+
+        <br><br>
+        <label for = "level">Select your coding level:</label>
+        <input type = "range" name = "level" id = "level" min = "0" max = "100">
+
+
+        <br><br>
+        <hr>
+        <button type = "submit" value = "Register">Register</button>
+        <button type = "reset" value = "Clear Form">Clear Form</button>
+
+    </form>
+</body>
+</html>

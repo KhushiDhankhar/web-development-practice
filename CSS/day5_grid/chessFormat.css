@@ -1,0 +1,32 @@
+*{
+    padding : 0px;
+    margin :0px;
+    box-sizing:border-box;
+}
+
+body{
+    background-color: black;
+    margin :10px;
+    height :100vh;
+    width :100vw;
+    display :flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: grid;
+    height : 800px;
+    width :800px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; /* 8X8 */
+    grid-template-rows: repeat(8,1fr);
+
+}
+.first{
+    background-color: white;
+}
+
+.second{
+    background-color : beige ;
+}
+

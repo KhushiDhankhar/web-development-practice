@@ -1,0 +1,41 @@
+*{
+    padding :0px;
+    margin :0px;
+    font-size : 30px;
+}
+
+body{
+    background-color: beige;
+}
+
+.container{
+    display: grid;
+    background-color : red;
+    height : 400px;
+    width:400px;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding:10px;
+    gap:10px;
+}
+
+.box{
+    text-align : center;
+    justify-content: center;
+}
+
+.first{
+    background-color : orange;
+}
+
+.second{
+    background-color:aquamarine;
+}
+
+.third{
+    background-color: bisque;
+}
+
+.fourth{
+    background-color: blue;
+}

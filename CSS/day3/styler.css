@@ -1,0 +1,23 @@
+div{
+    background-color: white;
+    position: relative;
+    top : 200px;
+    left :350px;
+    height : 250px;
+    width : 450px;
+
+}
+
+
+
+p{
+    height : 150px;
+    width :150px;
+    border-radius: 80px;
+    background-color: red;
+    position : absolute;
+    left : 140px;
+    top : 40px;
+    z-index: 10;
+}
+

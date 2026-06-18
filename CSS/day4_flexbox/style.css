@@ -1,0 +1,46 @@
+.container{
+    background-color: rgb(246, 219, 219) ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height :700px;
+    align-items: center;
+    flex-wrap : wrap;
+    gap:15px;
+
+}
+/* 
+main axis ke around justify-content work krta h and main axis is decided by flex direction 
+
+align items work around cross axis */
+
+#box1{
+    background-color: rgb(234, 244, 88);
+    height : 200px;
+    width : 200px;
+    
+
+}
+   
+
+#box2{
+    background-color: blue;
+    height : 200px;
+    width : 200px;
+
+}
+
+#box3{
+    background-color: rgb(55, 255, 0);
+    height : 200px;
+    width : 200px;
+    align-self : flex-start;  /* used to set align for item independently */
+ 
+}
+
+#box4{
+    background-color: red;
+    height : 200px;
+    width : 200px;
+    
+}

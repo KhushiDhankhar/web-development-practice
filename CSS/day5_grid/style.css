@@ -1,0 +1,42 @@
+*{
+    padding : 0px;
+    margin : 0px;
+}
+
+.container{
+    display : flex;
+    background-color: rgb(12, 141, 196);
+    padding : 5px;
+    gap:10px;
+}
+
+.box{
+    height :200px;
+    width : 150px;
+    text-align : center;
+    justify-content: center;
+}
+
+.first{
+    background-color : orange;
+}
+
+.second{
+    /* background-color : rgb(162, 255, 0); */
+    display : flex;
+    flex-direction : column;
+    gap :10px;
+}
+
+.child1{
+    height : 95px;
+    background-color : rgb(28, 221, 134);
+}
+
+.child2{
+    height : 95px;
+    background-color : rgb(28, 221, 134);
+
+} 
+
+

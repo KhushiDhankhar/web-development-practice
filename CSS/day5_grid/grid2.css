@@ -1,0 +1,90 @@
+*{
+    padding : 0px;
+    margin :0px;
+    box-sizing:border-box;
+}
+
+body{
+    background-color: rgba(82, 79, 79, 0.916);
+    margin :10px;
+    display :flex;
+    justify-content: center;
+    flex-direction : column;
+    align-items: center;
+    color : white;
+    font-size : 30px;
+}
+
+.container{
+    display:grid;
+    height : 800px;
+    width :800px;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 2fr 2fr 1fr;
+    gap : 15px;
+}
+
+.box{
+    background-color : rgb(43, 43, 226);
+    text-align: center;
+    padding-top:5%;
+
+}
+
+.header , .footer{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: blueviolet;
+}  
+
+.sidebar{
+    grid-row-start: 2;
+    grid-row-end:4;
+    padding-top:85%;
+    background-color: rgb(46, 234, 172);
+}
+
+.content1{
+    /* grid-column-start : 2;
+    grid-column-end : 4;  */
+    grid-column :2/4;
+    padding-top:20%;
+}
+
+.content2 , .content3{
+    padding-top:45%;
+}
+
+
+.container2{
+    display:grid;
+    height : 800px;
+    width :800px;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: repeat(4,1fr);
+    gap : 15px;
+}
+
+.one{
+    background-color : greenyellow;
+    grid-row:1/4;
+}
+
+.two{
+    background-color : greenyellow;
+    grid-column : 2/4;
+}
+
+.three , .five , .seven{
+    background-color : red;
+}
+
+.four , .eight{
+    background-color:orange;
+}
+
+.six{
+    grid-column: 4;
+    grid-row:2/4;
+    background-color : greenyellow;
+}

@@ -1,0 +1,59 @@
+*{
+    padding : 10px;
+    margin : 0px;
+}
+
+div{
+    margin : 5px;
+    padding : 5px;
+    position : static;
+    background-color : rgb(211, 204, 194)
+}
+
+h1{
+    background-color : aqua;
+    position : relative; /*khud ke position se*/ 
+    display : inline-box;
+    top : 50px;
+
+
+}
+
+.A{
+    background-color: bisque !important;
+}
+
+#Apple{
+    background-color: chartreuse;
+}
+
+h2{
+    background-color : aqua;
+    position : relative; /*khud ke position se*/ 
+    top : 70px;
+
+}
+
+h3{
+    background-color: rgb(201, 228, 252);
+    position: fixed; /*window ke relative me fixed */
+    top :0px;
+}   
+
+h4{
+    position : absolute;
+    background-color: bisque;
+    margin-top: 50px;
+    
+        
+
+}
+
+span{
+    position : sticky;
+    top: 15px;
+    background-color  : rosybrown;
+    display : inline-block;
+
+}
+

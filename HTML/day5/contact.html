@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+
+    <header>
+        <h1>this is our contact page</h1>
+        <ul>
+            <li><a href = "index.html">Home</a></li>
+            <li><a href = "course.html">courses</a></li>
+            <li><a href = "contact.html">contact us </a></li>
+            <li><a href = "media.html">Media</a></li>
+            <li><a href = "about.html">About Us</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <p>Contact us at:</p>
+        <p>Email: info@ourwebsite.com</p>
+        <p>Phone: 123-456-7890</p>
+        <p>Address: 123 Main Street, Anytown, USA</p>
+
+        <br>
+        <img src = "https://wallpapers.com/images/hd/wooden-blocks-contact-us-vh58juahu6kzh7i8.jpg" alt = "contact us image" width = "1300" height = "400" border = "1px solid #ccc" border-radius = 20px>
+        <div style="text-align: center; background-color: rgb(164, 231, 247); padding: 20px; border: 1px solid #ccc ;border-radius: 20px;">
+            <h2>Send us a message</h2>
+        <p>Or fill out the contact form below:</p>
+            <form>
+                <label for = "name">Name:</label><br>
+                <input type = "text" name = "name" id = "name" required><br><br>
+
+                <label for = "email">Email:</label><br>
+                <input type = "email" name = "email" id = "email" required><br><br>
+
+                <label for = "message">Message:</label><br>
+                <textarea name = "message" id = "message" rows = "5" cols = "40" placeholder = "Your message here..." required></textarea><br><br>
+
+                <input type = "submit" value = "Send Message">  
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; All rights reserved.</p>
+    </footer>
+    
+</body>
+</html>

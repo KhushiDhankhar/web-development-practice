@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title> 
+
+</head>
+<body>  
+
+    <form>
+        <label for = "name">Name:</label>
+        <input type = "text" name = "username" id = "name">
+        <br><br>
+
+        <label for = "fname">Father Name:</label>
+        <input type = "text" name = "fathername" id = "fname">
+        <br><br>
+
+        <label for = "age">Age:</label>
+        <input type = "number" name = "age" id = "age">
+        <br><br>
+
+        <label for = "email">Email:</label>
+        <input type = "email" name = "email" id = "email">
+        <br><br>
+
+        <label for = "pswd">Password:</label>
+        <input type = "password" name = "pswd" id = "pswd">
+        <br><br>
+
+        <!-- to link label and radio button we can use for in label and id in input type  -->
+
+        <!-- to make sure for backend which value of radio button is on you have to use value = "male" in input type -->
+
+        <label>Gender:</label>
+        <label for = "male">Male:</label>
+        <input type = "radio" name = "gender" id = "male" value = "male">
+        <label for = "female">Female:</label>
+        <input type = "radio" name = "gender" id = "female" value = "female">
+        <label for = "other">other:</label>
+        <input type = "radio" name = "gender" id = "other" value = "other">
+        <br><br>
+
+        <!-- to select multiple options we can use checkbox -->
+         <label>Programming Languages:</label>
+         <label for = "cpp"> C++ </label>
+         <input type = "checkbox" name = "languages" id = "cpp" value = "cpp">
+         <label for = "java"> Java </label>
+         <input type = "checkbox" name = "languages" id = "java" value = "java">
+         <label for = "python"> Python </label>
+         <input type = "checkbox" name = "languages" id = "python" value = "python">
+        <br><br>
+        <input type = "submit" value = "Submit">
+
+
+    </form>
+
+</body>
+</html>
