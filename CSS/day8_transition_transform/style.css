@@ -1,0 +1,67 @@
+*{
+    padding : 10px;
+    margin : 0px;
+    box-sizing: border-box;
+}
+
+.container{
+    height : 20vh;
+    width :100%;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    background-color : black;
+    gap : 200px;
+    /* perspective: 800px; */
+    flex-wrap : wrap;
+}
+
+.box,.front,.back{
+    height : 400px;
+    width : 400px;
+    text-align: center;
+    font-size:60px;
+    color : white;
+    background-color: orange;
+    transition-property: all;
+    transition-duration: 3s;
+}
+
+.front,.back{
+    backface-visibility: hidden;
+}
+
+.back{
+    transform: rotateY(180deg);
+    background:purple;
+    color:whitesmoke;
+    transform:rotateY(180deg);
+}
+
+/* for transition you need trigger moment but not for animation */
+ /* transform helps to not change/impact the other conatiners / text of  website */
+
+.box:hover{
+    background-color: purple;
+    /* height : 380px;
+    width : 380px; */
+    cursor : pointer;
+    box-shadow: 0 0 25px 30px pink;
+    /* transform : scale(1); */
+    transform: rotateY(180deg);
+    color : whitesmoke;
+    /* backface-visibility: hidden; */
+    /* transform: translateZ(190px); */
+    /* animation: spin 1s linear; */
+
+
+}
+ 
+@keyframes spin{
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(180deg);
+    }
+}
