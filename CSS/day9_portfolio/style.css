@@ -13,13 +13,18 @@ body{
 
 .main-container{
     display:grid;
-    max-width : 1200px;
+    max-width : 1800px;
     grid-template-columns: 350px 1fr;
     box-shadow:0px 0px 10px 5px gold;
     border-radius: 20px;
     gap : 40px;
-    margin-left : 15%;
+    /* margin-left : 15%;*/
     margin-top:5%;
+
+    margin : auto;
+    margin-top:5%;
+    margin-bottom: 5%;
+
 }
 
 .sidebar{
