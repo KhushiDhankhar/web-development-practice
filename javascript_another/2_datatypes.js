@@ -135,6 +135,7 @@ else{
 "vinod" - "thapa";  //NaN
 true + true;   // 2  number
 true + false;  //1 
+false - true; // -1 number
 
 
 
