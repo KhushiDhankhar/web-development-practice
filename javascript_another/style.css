@@ -1,10 +1,36 @@
+*{
+    margin :10px;
+    padding :10px;
+    
+}
 h1{
     text-align : center;
-    font-size : 30px;
-    color :rgb(229, 189, 138)
+    font-size : 50px;
+    color :rgb(232, 184, 122)
 }
 
 body{
-    background-color :rgba(235, 235, 9, 0.808);
+    background-color :rgba(244, 244, 194, 0.808);
+
+}
+
+button{
+    background-color :rgb(250, 238, 229);
+    border : 2px solid black ;
+    box-shadow : 2px 2px 2px gold;
+    padding : 10px;
+    height : 80px;
+    width:80px
+
+}
+
+button:hover{
+    background-color :rgb(250, 238, 229);
+    border : 2px solid black ;
+    box-shadow : 3px 3px 4px gold;
+    padding : 10px;
+    transform :scale(1.1);
+    height : 90px;
+    width:90px;
     
 }
