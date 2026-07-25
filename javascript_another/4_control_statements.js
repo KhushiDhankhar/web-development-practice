@@ -171,3 +171,40 @@ for(var i=0;i<=10;i++){
     console.log('2 * ' + i + ' = ' + 2*i);
 }
 
+// finding sum of 1 to 10 
+var sum = 0;
+//debugger;
+for(var i = 1;i <= 10; i++){
+    sum += i;
+}
+
+console.log("sum of 1 to 10 = " + sum);
+
+// logging sum of 1 to 10 
+sum = 0;
+
+for(var i = 1;i <= 10; i++){
+    sum += i;
+    console.log(sum);
+}
+
+
+// check leap year
+var year = 100;
+
+if((year%4 == 0 && year%100 != 0) || (year%400 == 0) ){
+    console.log("leap year");
+}
+else{
+    console.log("not a leap year");
+}
+
+for(var i = 1;i<=5;i++){
+    var pattern = "";
+    for(var j = 1;j<=i;j++){
+        pattern += " * "
+    }
+    console.log(pattern);
+}
+
+
