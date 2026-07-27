@@ -101,8 +101,26 @@ console.log(rev("hello"));  // olleh
 console.log(isPalindrome("madam")); // true
 console.log(isPalindrome("Madam"));  // false
 
-// calculator -> support add, sub, mult , div
-function calculator(a,b,c){  // c = operator
+// making isPalindrome a fat arrow function 
+const palindrome = (a) => {
+    let b = rev(a);
+    if(a === b){
+        console.log(`yes , ${a} is a palindrome`);
+    }
+    else{
+        console.log(`No , ${a} is not a palindrome`);
+    }
+}
+
+palindrome("hello");
+palindrome("racecar");
+palindrome("Khushi");
+
+
+// calculator -> support add, sub, mult , div 
+// update : making this calculator a fat arrow function 
+
+const calculator = (a,b,c) => {  // c = operator
     switch(c){
         case "+":
             console.log("addition of two num is :");
@@ -119,16 +137,16 @@ function calculator(a,b,c){  // c = operator
         case "/": 
             console.log("division of two num is :");
             if(b == 0){
-                alert("cannot divide by 0");  // cannot work in vscode , will get reference error  , they are supported by browser DOM 
-                return ;
+                // alert("cannot divide by 0");  // cannot work in vscode , will get reference error  , they are supported by browser DOM 
+                return ("cannot divide by 0");
             }
 
             return a/b;
             
         default:
-            alert("Invalid operator");
-
-        
+            // alert("Invalid operator");
+            return ("Invalid operator");
+            
     }
 
 }
@@ -140,23 +158,3 @@ console.log(calculator(5,10,"*"));
 console.log(calculator(5,10,"/"));
 console.log(calculator(5,0,"/"));
 console.log(calculator(5,10,"7"));
-
-
-// Ecma script 2015 : 
-// let and const , template strings , default arguments , arrow functions
-// deconstructing , object properties , rest operators, spread operators 
-
-//let and const 
-// let = block scope , mutuable values , can reassign its values
-let a = 10;
-console.log(a);
-
-a = 20;
-console.log(a);
-
-// cosnt = block scope , immutuable ,cannot reassign 
-const b = 20;
-console.log(b);
-
-b = 30;
-console.log(b);
