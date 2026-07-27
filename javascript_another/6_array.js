@@ -73,7 +73,7 @@ for(let items in arr1){
 //3. forEach loop 
 // The arr. forEach() method calls the provided function once for each element of the
 // array. The provided function may perform any kind of operation on the elements of the
-// given array.
+// given array.  doenot return value , change original array ,, cannot changed with array methods
 
 /*
     Syntax - forEach
@@ -112,9 +112,19 @@ fruits.forEach( (currEl , idx , fruits) => {
 );
 
 
+// for each does not return anything for ex 
+const newarr = fruits.forEach( (currEl , idx , fruits) => {
+    return (` ${idx} -> ${currEl}`);
+    }
+);
+
+console.log(newarr);   // undefined
+
 //4 . for map function 
 // map() creates a new array from calling a function for every array element. map()
 // does not change the original array.
+// return value , doenot change og array
+
 /*
     Syntax - Map()
 
@@ -130,4 +140,94 @@ fruits.forEach( (currEl , idx , fruits) => {
 */
 
 
+console.log();
+console.log( "map function " );
+fruits.map( (currEl , idx , fruits) => {
+    console.log(` ${idx} -> ${currEl}`); 
+    }
+);
 
+const newarr1 = fruits.map( (currEl , idx , fruits) => {
+    return (` ${idx} -> ${currEl}`);
+    }
+);
+
+console.log(newarr1);   // [ ' 0 -> apple', ' 1 -> mango', ' 2 -> cherry', ' 3 -> blueberry' ]
+
+// to do practice 
+//multiply each element of array by 2
+
+const arr3 = [1,2,3,4,5,6];
+const mult = arr3.map( (currEl) =>{
+    return (currEl * 2);
+});
+
+console.log(mult);
+
+/*
+ How to Insert, Add, Replace and Delete Elements in Array(CRUD)
+
+    1: push(): Method that adds one or more elements to the end of an array. , return new length
+    2: pop(): Method that removes the last element from an array.
+    3: unshift(): Method that adds one or more elements to the beginning of an array.
+    4: shift(): Method that removes the first element from an array.
+*/
+
+let person = ['khushi' , 'siya' , 'nia'];
+console.log(person);
+
+console.log(person.push('Gita'));  // return new size 
+console.log(person);
+
+console.log(person.push('newname' ,'oldname'));
+console.log(person);
+
+console.log(person.unshift('great'));  // return newsize
+console.log(person);
+
+console.log(person.pop()); // return what is removed 
+console.log(person);
+
+console.log(person.shift());
+console.log(person);
+
+/*
+    The splice() method of Array instances changes the contents of an array by
+    removing or replacing existing elements and/or adding new elements in place
+
+    syntax
+     splice(start, deleteCount, item1, item2, ... ,  itemN)
+
+*/
+
+
+console.log(person.splice());  //[]
+//console.log(person.splice(1)); // [ 'siya', 'nia', 'Gita', 'newname' ]  , first ko choddke baki sab return kiya 
+
+console.log(person.splice(2));  // [ 'nia', 'Gita', 'newname' ] if above statement reains commented
+
+console.log(person);  // [ 'khushi', 'siya' ]
+
+console.log(person.splice(1,1,"siri"));  // [ 'siya' ]
+console.log(person);  // [ 'khushi', 'siri' ]
+
+// what if you want to add the element before last element
+    person.splice(-1,0,"taehyung");  
+    console.log(person);   // [ 'khushi', 'taehyung', 'siri' ]
+
+// at end
+     person.splice(person.length,0,"puriii");
+     console.log(person);  //  [ 'khushi', 'taehyung', 'siri', 'puriii' ]
+
+
+// searching 
+// for search we have - indexOf , lastIndexOf & includes
+
+const num = [1,2,3,4,5,6,7,8,9];
+
+/*
+    indexOf()
+        indexOf Method: The indexOf method returns the first index at which a
+        given element can be found in the array, or -1 if it is not present.
+        Syntax: indexOf(searchElement, fromIndex)
+*/
