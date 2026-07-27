@@ -223,11 +223,47 @@ console.log(person);  // [ 'khushi', 'siri' ]
 // searching 
 // for search we have - indexOf , lastIndexOf & includes
 
-const num = [1,2,3,4,5,6,7,8,9];
+const num = [1,2,3,4,5,6,7,8,,4,5,6,6,9];
 
 /*
     indexOf()
         indexOf Method: The indexOf method returns the first index at which a
         given element can be found in the array, or -1 if it is not present.
+
         Syntax: indexOf(searchElement, fromIndex)
+                indexOf(searchElement)
 */
+
+console.log(person.indexOf("khushi")); //0
+
+console.log(num.indexOf(7));  // 6
+console.log(num.indexOf(3,5));  // -1 cuz it is not in that index
+
+console.log(num.indexOf(6));  // 5
+console.log(num.lastIndexOf(6));  //12
+
+console.log(num.lastIndexOf(12));  // -1
+console.log(num.lastIndexOf(6,8));  // 5 -> check from backward in that range 0 to 8
+
+console.log(person.includes("taehyung"));  // true
+
+// todo challenge 
+
+const months = ["jan" ,"feb" , "march" ,"apr" ,"june" ,"july"];
+
+months.push("dec");
+console.log(months.splice());  //[]
+
+var indexToUpdate = months.indexOf("march");
+months.splice(indexToUpdate, 1, "March");  // updated march , have to delete 1 item prev march
+
+console.log(months);
+
+// delete june
+
+var idx = months.indexOf("june");
+months.splice(idx,1);
+
+console.log(months);
+
+// filter in an array
