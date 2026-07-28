@@ -223,7 +223,7 @@ console.log(person);  // [ 'khushi', 'siri' ]
 // searching 
 // for search we have - indexOf , lastIndexOf & includes
 
-const num = [1,2,3,4,5,6,7,8,,4,5,6,6,9];
+const num = [1,2,3,4,5,6,7,8,4,5,6,6,9];
 
 /*
     indexOf()
@@ -267,3 +267,214 @@ months.splice(idx,1);
 console.log(months);
 
 // filter in an array
+
+const num1 = [1,2,10,3,4,5,3,4,2,6,3,8,9,6];
+
+/* 1: find Method: The find method is used to find the first element in an array
+    that satisfies a provided testing function. It returns the first matching element or
+    undefined if no element is found.
+
+        same syntax as of map function
+*/
+
+const res = num1.find((currEl) =>{
+    return currEl > 5;
+});
+
+console.log(res);  //10 return a larger no than 5 
+console.log(typeof(res));  // number
+
+
+/* 2: findIndex.Method: The findIndex() method of TypedArray instances returns the
+    index of the first element in a typed array that satisfies the provided testing
+    function. If no elements satisfy the testing function, -1 is returned.
+*/
+
+const res1 = num1.findIndex((currEl) =>{
+    return currEl > 5;
+});
+
+console.log(res1);  //10 return index of larger no than 5 
+console.log(typeof(res1));  // number
+
+
+/* 3: filter Method: The filter method creates a new array with all elements that
+    pass the test implemented by the provided function.
+    syntax:
+        filter(callbackFn)
+        filter(callbackFn, thisArg)
+
+*/
+
+const res3 = num1.filter((currEl) =>{
+    return currEl > 5;
+});
+
+console.log(res3);  // return an array no. larger than 5 
+console.log(typeof(res3));  // object
+
+/* usecase 1 : In E-commerce website when we want to Remove or delete any product from
+addToCart page.
+*/
+
+//1 Ex. le'ts say user wants to delete value 6.
+
+let value = 6;
+const numbers = [1, 2, 3, 4, 6, 5, 6, 7, 8, 9];
+
+let updatedCart = numbers.filter((currel) => {
+    return currel != value;
+});
+
+console.log(updatedCart);  //  [ 1, 2, 3, 4, 5, 7, 8, 9 ]
+
+/*  Q: Given an array of products where each product has a name and a
+    price, write a function that uses the filter method to return an
+    array containing only the products with a price less than or
+    equal to 500.
+*/
+
+const products = [
+{ name: "Laptop", price: 1200 },
+{ name: "Phone", price: 800 },
+{ name: "Tablet", price: 300 },
+{ name: "Smartwatch", price: 150 },
+
+];
+
+const result = products.filter((currel) => {
+    console.log(currel);
+    return currel.price <= 500;
+});
+
+console.log(result);
+
+// filter unique values
+let unique = numbers.filter((currel , idx,arr) =>{
+    // console.log(idx);  // tell index in array 
+    // console.log(arr.indexOf(currel)); //tell the first occuarnce idx of an element
+    return arr.indexOf(currel) === idx;  // if they are equal only then they are unique
+});
+
+console.log(unique);
+
+// 2nd method using set
+console.log(new Set(numbers));  //Set(9) { 1, 2, 3, 4, 6, 5, 7, 8, 9 }
+
+console.log([new Set(numbers)]);  // [ Set(9) { 1, 2, 3, 4, 6, 5, 7, 8, 9 } ]
+console.log([...new Set(numbers)]); //spread method
+// [1, 2, 3, 4, 6, 5, 7, 8, 9 ]
+
+
+// How to Sort and Compare an Array
+/* Sorting an Array: The sort method sorts the elements of an array in place and returns
+   the sorted array. By default, it sorts elements as strings.
+*/
+
+const biscuits = ["parle-G" , "sunfeast" , "tiger" , "bounce" , "jim-jam" , "good-day"];
+
+biscuits.sort();
+console.log(biscuits);
+
+// biscuits.sort(-1);  //error
+// console.log(biscuits); 
+
+numbers.sort();
+console.log(numbers);
+
+// to sort them in desc order : use compare callback function
+
+const sorted = numbers.sort((a,b) => {
+    if(a > b) return -1;
+    if(b > a) return 1;
+});
+
+// a-b :  a>b  return 1 => switch the order
+// a < b return -1 => keep the order
+
+console.log(numbers);
+
+
+//square using map
+
+const n = [1,2,3,4,5,16,34,23,56,78,90,76];
+let res5 = n.map((currel) => currel * currel);
+
+console.log(res5);
+
+// sqaure only those who is even
+
+let res4 = n.map((currel) => {
+    if(currel % 2 == 0){
+        return currel * currel;
+    }
+    return currel;
+});
+
+console.log(res4);
+
+//if want only those no. who are even and square them
+
+const numm = n.map((currel) => {
+    if(currel % 2 == 0){
+        return currel * currel;
+    }
+}) . filter((currel) => currel != undefined);
+
+console.log("if want only those no. who are even and square them")
+console.log(numm);
+
+// another way of writing same thing 
+const evensq = n
+                .map((curr) => (curr % 2 === 0 ? curr*curr : undefined) )
+                .filter((curr) => curr != undefined );
+
+console.log(evensq);
+
+
+// return array where each string is capitalized
+const word = ["apple" , "banana" ," cherry" ,"date"];
+
+const ress = word.map((currel) => {
+    return currel.toUpperCase();
+});
+
+console.log(ress);  // [ 'APPLE', 'BANANA', ' CHERRY', 'DATE' ]
+
+
+// return array with prefix ms.
+const names = ["khushi" , "puriii" , "tanya" , "dipshi" , "khevya"];
+
+const result1 = names.map((currel) => {
+    return `ms. ${currel}`;
+});
+
+console.log(result1);
+// [ 'ms. khushi', 'ms. puriii', 'ms. tanya', 'ms. dipshi', 'ms. khevya' ]
+
+
+/*
+    Reduce method :
+        The reduce method in JavaScript is used to accumulate or reduce an array to
+        a single value. It iterates over the elements of an array and applies a
+        callback function to each element, updating an accumulator value with the
+        result. The reduce method takes a callback function as its first argument and
+        an optional initial value for the accumulator as the second argument.
+
+            syntax:
+                array.reduce(function callback(accumulator , currVal , idx , array){
+                    // your logic here 
+                    // return updated accumulator value
+                } , initialValue);
+
+*/
+
+// ex : add product prices
+
+const productprices = [100,200,300,700,800,9887];
+
+const sum = productprices.reduce((accum , el) =>{
+    return accum + el;
+},0);
+
+console.log(sum); //11987
