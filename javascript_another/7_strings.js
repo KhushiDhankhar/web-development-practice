@@ -387,3 +387,96 @@ console.log(text2.split(' ').reverse());
 // join() ==> to convert array into string
 console.log(text2.split(' ').join(' '));  // Hello JavaScript, welcome to our JavaScript course
 
+// questions
+
+/*1: Write a JavaScript function that prints the letters 'a' through
+'z' in the console. You should use a loop to iterate through the
+letters and print each one on a new line.
+*/
+
+const printLetters = (() => {
+    let start = "a".charCodeAt();
+    let end = "z".charCodeAt();
+
+    for(var i = start; i<= end;i++){
+        console.log(String.fromCharCode(i));   // to get char from ascii code
+    }
+});
+
+printLetters();
+
+// 2: Write a function to count the number of vowels in a string?
+
+let wordd = "hEllo , hope so , you are doing good and will not stop working hard ";
+const countVowel = ((wordd) => {
+
+    wordd = wordd.toLowerCase();
+    var accum = 0;
+    for(let i = 0;i<wordd.length ;i++ ){
+        var currel = wordd[i];
+        if(currel == 'a' || currel =='e' || currel == 'i' || currel == 'o' || currel =='u'){
+            accum = accum + 1;
+        }
+    }
+
+    return accum;
+});
+
+console.log(countVowel(wordd));  //20
+
+// 3: Write a function to check if all the vowels presents in a string
+// or not?
+
+const checkVowels = ((word) =>{
+    word = word.toLowerCase();
+    return (word.includes('a') && word.includes('e') && word.includes('i') && word.includes('o') && word.includes('u') );
+});
+
+if(checkVowels(wordd)){
+    console.log(`${wordd} : It contains all vowels`);
+}
+else{
+    console.log(`${wordd} : It doesnot contains all vowels`);
+}
+
+/*
+    Write a JavaScript function isPangram that takes a string as input
+    and returns true if the string is a pangram (contains all letters of
+    the alphabet) and false otherwise. The function should be case-
+    insensitive and ignore spaces.
+
+    Constraints:
+
+    1: The input string will consist of alphabetic characters and spaces.
+    2: The function should handle both uppercase and lowercase letters
+    3: Consider the English alphabet with 26 letters.
+*/
+
+var sentence = "The Quick Brown Fox Jumps over the lazy dog";
+
+const pangram = ((word) =>{
+
+    if(word.length < 26){  // early check
+        return false;
+    }
+
+    word = word.toLowerCase();
+    let start = "a".charCodeAt();
+    let end = "z".charCodeAt();
+
+    for(var i = start; i<= end;i++){
+        var ch = String.fromCharCode(i);   // to get char from ascii code
+
+        if(!word.includes(ch)){
+            return false;
+        }
+    }
+
+    return true;
+  
+});
+
+
+console.log((pangram(sentence) ? `yes, the sentence \" ${sentence} \" contains all alphabets , so it is a pangram` : `No, the sentence \" ${sentence} \"doesnot contains all alphabets , so it is not a pangram` ))
+
+
