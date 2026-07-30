@@ -479,4 +479,18 @@ const pangram = ((word) =>{
 
 console.log((pangram(sentence) ? `yes, the sentence \" ${sentence} \" contains all alphabets , so it is a pangram` : `No, the sentence \" ${sentence} \"doesnot contains all alphabets , so it is not a pangram` ))
 
+//second method using filter
 
+const pangramChecker = ((str) => {
+    let arr = str.toLowerCase().split("");
+
+    const values = arr.filter( (currel) => {
+        currel.charCodeAt() >= "a".charCodeAt() &&
+        currel.charCodeAt()<= "z".charCodeAt()
+    });
+
+    return new Set(values).size == 26;
+});
+
+
+console.log((pangramChecker(sentence) ? `yes, the sentence \" ${sentence} \" contains all alphabets , so it is a pangram` : `No, the sentence \" ${sentence} \"doesnot contains all alphabets , so it is not a pangram` ))
