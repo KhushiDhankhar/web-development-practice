@@ -73,3 +73,30 @@
     change the content of the HTML document using JavaScript
 
 */
+
+
+/* BOM Properties:
+
+window properties
+
+    window.console:
+    Represents the browser's debugging console.
+    Allows logging messages using methods like log(), warn(), and error().
+
+    window.innerWidth / window.innerHeight:
+    Provides the width and height of the browser's content area (excluding toolbars and scrollbars).
+
+    window.scrollX / window.scrollY:
+    Represents the number of pixels that the document is currently scrolled horizontally and vertically.
+
+    window.outerWidth / window.outerHeight:
+    Provides the width and height of the whole browser window (including toolbars and borders).
+
+    window.localStorage:
+    Provides a way to store key-value pairs persistently on the user's device.
+    Allows storing data beyond the lifetime of a single page session.
+
+Functions alert(), confirm(), and prompt() are also a part of BOM:
+They are directly not related to the document but represent browser methods of communicating with the user.
+*/
+
