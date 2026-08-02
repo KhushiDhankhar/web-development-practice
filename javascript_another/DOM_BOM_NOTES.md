@@ -1,4 +1,4 @@
-J# JavaScript DOM and BOM Complete Notes
+# JavaScript DOM and BOM Complete Notes
 
 ---
 
