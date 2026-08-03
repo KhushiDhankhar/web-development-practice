@@ -32,3 +32,4 @@ Comment node: Represent comments within the HTML document.
  Document node: A document node.
 
  Document type node: A document type node, such as <! DOCTYPE html>.
+ */
