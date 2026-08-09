@@ -1,21 +1,33 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
-
+    <title> DOM Learning </title>
 </head>
-<- it's a comment node ->
+
+<!--  it's a comment node  -->
 <body>
-<div>
-<h1 id="heading">DOM API</h1>
-<ul class="list-of -- nodes">
-<li>1 node</li>
-<li>2 node</li>
-<li>3 node</li>
- !- <li>4th node </li> ->
-<li>4 node</li>
-<li style="display: none">5 node</li>
-<ul>
-</div>
+    <div>
+        <h1 id="heading">DOM API</h1>
+        <ul class="list-of -- nodes">
+            <li>1 node</li>
+            <li>2 node</li>
+            <li>3 node</li>
+            <!-- <li>4th node </li> -->
+            <li>4 node</li>
+            <li style="display: none">5 node</li>
+        </ul>
+    </div>
+
+<script>
+    let findelementById = document.getElementById("heading");
+    console.log(findelementById);
+
+    let findelementById2 = document.getElementById("#heading");
+    console.log(findelementById2);
+
+    const findElementByClassName = document.getElementsByClassName("list-of -- nodes")
+    console.log(findElementByClassName);
+</script>
 
 </body>
-<html>
+</html>
