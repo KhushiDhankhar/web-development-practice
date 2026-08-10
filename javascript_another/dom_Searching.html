@@ -27,7 +27,46 @@
 
     const findElementByClassName = document.getElementsByClassName("list-of -- nodes")
     console.log(findElementByClassName);
+
+    console.log(...findElementByClassName);  //spread op
+
+    for(let elem of findElementByClassName){
+        console.log(elem);
+    }
+
+    for(let elem of findElementByClassName){
+        console.log(elem.innerHTML);
+        console.log(elem.innerText); // agr css apply kiya hua content chayiye to 
+        // console.log(elem.textContent);  // textcontent me css apply nhi hota so ye sab dikhaega 
+    }
+
+    // Example using innerText : prints text as it appears on screen,
+    // considering styling and excluding hidden text.
+
+    // Example using textContent': Prints text as it is in the markup,
+    // including hidden text and without considering styling.
+
+
+    const getElementsByTagName = document.getElementsByTagName("li");
+    console.log(getElementsByTagName);
+
+    // console.log( ... getElementsByTagName);
+    for (let name of getElementsByTagName) {
+        console.log(name);
+    }
+
+    // console.log(...findElementByClassName.innerHTML);
+    // console.log(findElementByClassName.innerHTML);
+
+
+    const findElementByQuerySelector = document.querySelector(#heading);
+    console.log(findElementByQuerySelector.innerHTML);
+    
+    
+
 </script>
 
+
+<!-- element ko target krte h to collection milta h , nodes ko target krte h to node list milta h  -->
 </body>
 </html>
