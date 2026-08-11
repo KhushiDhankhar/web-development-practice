@@ -2,6 +2,7 @@
 <html lang = "en">
     <head>
         <title> simple Dom todo app</title>
+        <link rel = "stylesheet" href = "styler2.css" >
     </head>
     <!-- its a comment node -->
 
@@ -28,15 +29,26 @@
                 todoElem.append(pElem);
             }
 
+            const removeTodo = () =>{
+
+            }
+
             let clickBtn = document.querySelector(".btn");
             //console.log(clickBtn);
 
             let todoElem = document.querySelector(".todo");
-
+            
 
             let todoFirst = document.getElementById("todoFirst");
             clickBtn.addEventListener("click" , () => {
                 addTodo();
+            });
+
+            // event delegation
+            todoElem.addEventListener('click' , (event) => {
+                console.log(event.target);
+                let currElem = event.target;
+                currElem.remove();
             });
 
         </script>
