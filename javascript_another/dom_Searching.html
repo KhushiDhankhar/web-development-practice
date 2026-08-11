@@ -59,10 +59,21 @@
     // console.log(findElementByClassName.innerHTML);
 
 
-    const findElementByQuerySelector = document.querySelector(#heading);
-    console.log(findElementByQuerySelector.innerHTML);
+    // manipulated the html (static) content using dom 
+    const findElementByQuerySelector = document.querySelector("#heading");
+    console.log(findElementByQuerySelector.innerHTML = " world best js course");
     
-    
+    // manipulating a li content tag
+    const findElementByQuerySelectorAll = document.querySelector('li');
+    // for all li components use querySelectorAll , and for first li -> use querySelector 
+    console.log(findElementByQuerySelectorAll);
+
+    // manipulating a li content tag
+    const findElementByQuerySelectorAll2 = document.querySelectorAll('li');
+    //console.log(findElementByQuerySelectorAll2);
+
+    findElementByQuerySelectorAll2.forEach((currElem) => console.log(currElem));
+
 
 </script>
 

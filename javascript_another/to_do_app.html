@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title> simple Dom todo app</title>
+    </head>
+    <!-- its a comment node -->
+
+    <body>
+        <div>
+            <h1> simple DOM Todo App</h1>
+            <input type = "text" id = "inputField" />
+            <button class = "btn"> click me</button>
+            <div class = "todo">
+                <!-- <p id = "todoFirst"> </p> -->
+            </div>
+        </div>
+
+        <script>
+            let inputValue = document.getElementById("inputField");
+            //console.log(inputValue);
+
+            const addTodo = () => {
+                console.log(inputValue.value);
+                //todoFirst.textContent = inputValue.value;
+                let pElem = document.createElement("p");
+                pElem.textContent = inputValue.value;
+                console.log(pElem);
+                todoElem.append(pElem);
+            }
+
+            let clickBtn = document.querySelector(".btn");
+            //console.log(clickBtn);
+
+            let todoElem = document.querySelector(".todo");
+
+
+            let todoFirst = document.getElementById("todoFirst");
+            clickBtn.addEventListener("click" , () => {
+                addTodo();
+            });
+
+        </script>
+    </body>
+</html>
+
+
+<!-- createElement se new element create hota h  -->
