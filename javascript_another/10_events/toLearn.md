@@ -1,11 +1,11 @@
-**3 ways of writing events in js
+## 3 ways of writing events in js
     - onclick
     - addEventListner
 
 
-**What is Event Object?
+## What is Event Object?
 
-**MouseEvent in JavaScript
+## MouseEvent in JavaScript
 
 | Event | Occurs When |
 |---|---|
@@ -21,6 +21,6 @@
 | `onmouseup` | The mouse button is released over an element |
 
 
-**KeyboardEvent in JavaScript
+## KeyboardEvent in JavaScript
 
-**InputEvents in JavaScript
+## InputEvents in JavaScript
