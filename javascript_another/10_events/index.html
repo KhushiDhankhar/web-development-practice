@@ -19,28 +19,66 @@
             border-radius: 30px;
             background-color: yellow;
             font-size : 30px ;
-            height : 80px;
+            height : 100px;
             padding : 20px;
             width : 200px;
-            
+
+            vertical-align: top;  
+            /* Your <button> elements are normally treated like inline-block elements. 
+                When you give them a width, their total size changes, and the browser's default vertical-align: baseline can make the buttons appear slightly up/down relative to each other.*/
+        } 
+
+        button:hover{
+            background-color : white;
+
         }
+
     </style>
 </head>
 <body>
 
     <!-- start inline event  -->
     <h1> Inline event</h1>
-    <button> greeting </button>
-    <button> greeting again </button>
-
+    <button  onclick = "alert('welcome to js course')"> greeting </button>
+    <button ondblclick="alert('welcome to js course')"> greeting again </button>
+    <button  onmouseover = "alert('welcome to js course')"> greeting </button>
+    
+    <!-- start dom event handler  -->
     <h1>Dom Event handler </h1>
-    <button> greeting </button>
-    <button> greeting again </button>
+    <button id = "myBtn" > greeting </button>
+    <button id = "myBtn1" > greeting again </button>
 
+    <!-- start addEventListener event handler -->
     <h1>addEventListener event handler </h1>
-    <button> greeting </button>
-    <button> greeting again </button>
+    <button id = "myBtn2" > greeting </button>
+    <button id = "myBtn3" > greeting again </button>
+
+
+    <script>
+
+        //dom 
+        document.getElementById('myBtn').onclick = () => {
+            alert('welcome to js course');
+        };
+
+        document.getElementById('myBtn1').ondblclick = function() {
+            alert('welcome to js course') ;
+        };
+
+        //addEventListener
+        document.getElementById('myBtn2').addEventListener('click' , function() {
+            alert('welcome to js course') ;
+        });
+
+        document.getElementById('myBtn3').addEventListener('mouseover' , () => {
+            alert('welcome to js course') ;
+        });
+
+
+    </script>
 
 </body>
+</html>
+
 
 

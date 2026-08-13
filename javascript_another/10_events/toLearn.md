@@ -1,6 +1,7 @@
 ## 3 ways of writing events in js
-    - onclick
-    - addEventListner
+    - Inline 
+    - dom event handler 
+    - addEventListner handler 
 
 
 ## What is Event Object?
