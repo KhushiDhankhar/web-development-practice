@@ -1,0 +1,51 @@
+
+*{
+    margin : 10px;
+    padding : 10px;
+}
+
+body{
+    background-color: rgb(165, 158, 158);
+    display : flex;
+    justify-content: center;
+    align-items : center;
+}
+
+p{
+    height : 100px;
+    width : 500px;
+    box-shadow: -7px 0px 0px white;
+    color: white;
+    font-size : 30px;
+    border-radius : 5px;
+    background-color : rgb(225, 222, 222)
+}
+
+.bton{
+    color : white;
+    font-size : 30px;
+    align-items: center;
+}
+
+button{
+    height :70px;
+    width : 200px;
+    border-radius : 30%;
+    font-size :30px;
+}
+
+#btn1{
+    background-color : rgb(39, 40, 39);
+    color : white;
+}
+
+#btn2{
+    background-color : rgb(31, 231, 128);
+}
+
+section{
+    display : flex column;
+    align-items: center;
+    justify-content: center;
+    gap : 40px;
+}

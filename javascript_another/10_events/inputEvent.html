@@ -24,8 +24,73 @@
     </div>
 
 </section>
+
 <script>
 
+    const handleInputEvent = (event) => {
+        console.log(event);
+
+        // Display information about the input event in the console
+        console.log("Input value:", event.target.value);
+        console.log("Input name:", event.target.name);
+        console.log("Input type:", event.inputType);
+        console.log("Event type:", event.type);
+
+        // now take reference of that p tag and do innertext or innerhtml and print 
+            document.querySelector(
+                ".inputValue"
+            ).textContent = `Input value : ${event.target.value}`;
+
+            document.querySelector(
+                ".inputName"
+            ).textContent = `Input name : ${event.target.name}`;
+
+            document.querySelector(
+                ".inputType"
+            ).textContent = `Input type : ${event.inputType}`;
+
+            document.querySelector(
+                ".eventType"
+            ).textContent = `Event type : ${event.type}`;
+
+    };
+
+    const handleInput = (event) => {
+        console.log(event);
+
+        // Display information about the input event in the console
+        console.log("Input value:", event.target.value);
+        console.log("Input name:", event.target.name);
+        console.log("Input type:", event.inputType);
+        console.log("Event type:", event.type);
+
+        // now take reference of that p tag and do innertext or innerhtml and print 
+            document.querySelector(
+                ".inputValue"
+            ).textContent = `Input value : ${event.target.value}`;
+
+            document.querySelector(
+                ".inputName"
+            ).textContent = `Input name : ${event.target.name}`;
+
+            document.querySelector(
+                ".inputType"
+            ).textContent = `Input type : ${event.inputType}`;
+
+            document.querySelector(
+                ".eventType"
+            ).textContent = `Event type : ${event.type}`;
+
+    };
+
+    // input : to filter out things , change : for searching after the word or thing is completely written 
+
+    const inputElem = document.getElementById("myInput");
+    //inputElem.addEventListener('input'  , handleInput );
+
+    // print when we do a change ; like writing in input box doesnot give any output , but once we click outside input box , a change is done , then it reflect values in lower blocks
+    inputElem.addEventListener("change" , handleInputEvent); 
+    
 </script>
 
 </body>
