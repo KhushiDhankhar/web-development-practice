@@ -1,0 +1,110 @@
+<html lang="en">
+<head>
+
+    <style>
+       
+
+        body {
+            justify-content: center;
+            margin-top: 10rem;
+            background-color: black;
+        }
+
+        .keyPressed,
+        .keyCode,
+        .eventType {
+            color: #e8e042;
+        }
+
+        .charCode{
+            color : rgba(15, 244, 7, 0.918);
+        }
+
+        p{
+            font-size : 30px;
+            margin-left : 10px;
+        }
+
+        .output{
+            margin-left : 10px;
+            background-color : rgb(101, 98, 98);
+            box-shadow: -6px 0px 1px white ;
+            height : 300px;
+            padding : 5px;
+            width : 500px;
+            border-radius: 20px;
+        
+        }
+
+        input{
+
+            font-size : 30px;
+            height : 50px;
+            width : 500px;
+            border-radius: 20px;
+            padding : 10px;
+            margin : 5px;
+            box-shadow: 7px 7px 10px rgb(242, 228, 228) ;
+        }
+
+        #section{
+            display : flex ;
+            flex-direction : column;
+            gap : 20px;
+            align-items : center;
+
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    <div id = "section">
+        <input type="text" id="myInput" placeholder="Type something ... " />
+        <div class="output">
+            <p class="keyPressed">Key pressed : </p>
+            <p class="keyCode">Key code : </p>
+            <p class="charCode">Char codeAt : </p>
+            <p class="eventType">Event type : </p>
+        </div>
+    </div>
+
+    <script>
+        const handleKeyPress = (event) =>{
+            console.log(event);
+
+            //display information about the keyboard event in console
+
+            console.log('key presssed: ', event.key );
+            console.log("key code: " , event.code);
+            console.log("event type : " , event.type);
+
+            // now take reference of that p tag and do innertext or innerhtml and print 
+            document.querySelector(
+                ".keyPressed"
+            ).textContent = `key pressed : ${event.key}`;
+
+            document.querySelector(
+                ".keyCode"
+            ).textContent = `key code : ${event.code}`;
+
+            document.querySelector(
+                ".charCode"
+            ).textContent = `Char codeAt : ${event.key.charCodeAt(0)}`;
+
+            document.querySelector(
+                ".eventType"
+            ).textContent = `Event type : ${event.type}`;
+
+        };
+
+        // get the input element by its ID
+        var myInput = document.getElementById("myInput");
+        myInput.addEventListener("keydown" , handleKeyPress);
+
+        myInput.addEventListener("keyup", handleKeyPress);
+    </script>
+</body>
+</html>

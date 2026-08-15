@@ -6,12 +6,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MouseEvent Example</title>
-    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
     <style> 
 
         *{
-            padding : 100px;
-            margin :50px;
+            padding : 10px;
+            margin  : 10px;
+        }
+
+        section {
+            display: flex;
+            align-items: center;
+            justify-content : center;
         }
 
         .rectangle{
@@ -20,9 +26,10 @@
             background-color : yellow;
         
         }
-        .rectangle:hover{
+
+        /* .rectangle:hover{
             border-radius : 50%;
-        }
+        } */
 
         button{
             height : 40px;
@@ -37,28 +44,31 @@
 
         .addTransition2{
             border-radius : 0px;
-            background-color : yellow;
+            background-color : rgb(220, 113, 188);
         }
 
         .addTransition3 {
-            translate: -30rem 0;
+            border-radius : 50%;
+            background-color : rgb(0, 128, 255);
+            translate: -30rem 0;  /* move -ve side */ 
         }
 
         .addTransition4 {
             border-radius: 50%;
-            background-color: #f5ee62;
+            background-color: #8ed4f9;
             translate: 30rem 0;
         }
 
         .addTransition5 {
             border-radius: 50%;
-            background-color: #f5ee62;
-            translate: -30rem 0;
+            background-color: #73f562;
+            translate: -20rem 0;
         }
 
         .addTransition6 {
             border-radius: 0%;
-            background-color: #f5ee62;
+            background-color: #f5c662;
+            translate : 50rem 0 ;
         }
     </style>
 
@@ -77,29 +87,33 @@
         let rectDiv = document.querySelector(".rectangle");
 
         const handleMouseEvents = () => {
-            console.log("click");
+            console.log("click on button ");
             rectDiv.style.backgroundColor = "green";
         }
 
         // adding classses using dom 
         const handleMouseEvents2 = ()=> {
-            console.log("dblclcik");
+            console.log("dblclick on button");
             rectDiv.classList.add("addTransition");
         }
 
         const handleMouseEvents3 = () => {
-            rectDiv.classList.add("addTransition2");
+            console.log("mouse over");
+            rectDiv.classList.add("addTransition3");
         }
 
         const handleMouseEvents4 = () => {
+            console.log("mouse out");
             rectDiv.classList.add("addTransition4");
         }
 
         const handleMouseEvents5 = ()=> {
+            console.log("mouse down");
             rectDiv.classList.add("addTransition5");
         }
 
         const handleMouseEvents6 = ()=> {
+            console.log("mouse up");
             rectDiv.classList.add("addTransition6");
         }
 
