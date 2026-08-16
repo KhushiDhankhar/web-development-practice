@@ -7,11 +7,11 @@
     <body>
         <section>
             <div class = "section">
-                <button id = "btn1"> #051937 </button>
-                <button id = "btn2"> #008793 </button>
+                <button id = "btn1"> #004773 </button>
+                <button id = "btn2"> #54d542 </button>
             </div>
                 <div class = "bton"> click to copy your code</div>
-                <p class = "copyCode"> background-image : linear-gradient(to right , rgb(92,145,229) , rgb(152,63,198))</p>
+                <p class = "copyCode"> background-image : linear-gradient(to right , #004773 , #54d542)</p>
             
         </section>
 
@@ -21,10 +21,13 @@
             let btn2 = document.getElementById("btn2");
 
             let copyDiv = document.querySelector('.copyCode');
-            let rgb1 = "#000";
-            let rgb2 = "#000";
-            // RRGGBB - hexadecimal col => 0-9, A-F
 
+            // updated original colours at rgb variables
+            let rgb1 = "#004773";
+            let rgb2 = "#54d542";
+
+
+            // RRGGBB - hexadecimal col => 0-9, A-F
             const hexcolor = () => {
                 let myHexValues = "0123456789abcdef";
                 let colors = "#";
@@ -66,7 +69,7 @@
 
             copyBtn.addEventListener('click' , () => {
                 navigator.clipboard.writeText(copyDiv.innerText);
-                alert(`copied`);
+                alert(`copied !`);
             });
 
             // changing these colors codes in html file too
