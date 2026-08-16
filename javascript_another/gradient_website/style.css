@@ -4,8 +4,20 @@
     padding : 10px;
 }
 
+
 body{
-    background-color: rgb(165, 158, 158);
+    min-height: 100vh;
+    /* background-color: rgb(165, 158, 158); */
+    
+    background-image : linear-gradient(
+        to right top,
+        #051937,
+        #004d7a,
+        #008793,
+        #00bf72,
+        #a8eb12 
+    );
+
     display : flex;
     justify-content: center;
     align-items : center;
@@ -18,19 +30,30 @@ p{
     color: white;
     font-size : 30px;
     border-radius : 5px;
-    background-color : rgb(225, 222, 222)
+
+    /* transparent glass background */
+    background: rgba(255, 255, 255, 0.15);
+
+    /* blur the background behind p */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    /* glass border */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
 }
 
 .bton{
     color : white;
     font-size : 30px;
-    align-items: center;
+    cursor: pointer;
+    box-shadow : 0px 0px 10px rgb(205, 168, 168);
 }
 
 button{
     height :70px;
     width : 200px;
-    border-radius : 30%;
+    border-radius : 999px;
     font-size :30px;
 }
 
@@ -44,8 +67,14 @@ button{
 }
 
 section{
-    display : flex column;
+    display : flex ;
+    flex-direction : column;
     align-items: center;
     justify-content: center;
     gap : 40px;
+}
+
+.section{
+    display: flex;
+    gap: 20px;
 }

@@ -7,12 +7,74 @@
     <body>
         <section>
             <div class = "section">
-                <button id = "btn1"> color 1 </button>
-                <button id = "btn2"> color 2 </button>
+                <button id = "btn1"> #051937 </button>
+                <button id = "btn2"> #008793 </button>
             </div>
                 <div class = "bton"> click to copy your code</div>
-                <p class = "code"></p>
+                <p class = "copyCode"> background-image : linear-gradient(to right , rgb(92,145,229) , rgb(152,63,198))</p>
             
         </section>
+
+        <script>
+            // make reference of buttons
+            let btn1 = document.getElementById("btn1");
+            let btn2 = document.getElementById("btn2");
+
+            let copyDiv = document.querySelector('.copyCode');
+            let rgb1 = "#000";
+            let rgb2 = "#000";
+            // RRGGBB - hexadecimal col => 0-9, A-F
+
+            const hexcolor = () => {
+                let myHexValues = "0123456789abcdef";
+                let colors = "#";
+
+                // a loop of 6 is to run to get 6 random no. so that we can get a random rgb color
+                for(let i = 0 ; i < 6 ; i++){
+                    let idx = Math.floor( Math.random() * 16 ) ; // random give [0,1) value , but we want upto 16 so * by 16 but still it give decimal value so used floor 
+                    //console.log(myHexValues[idx]);
+
+                    colors = colors + myHexValues[idx];
+                }
+
+                //console.log(colors);
+                return colors;
+            };
+
+            const handlebtn1 = () => {
+                rgb1 = hexcolor();
+                console.log(rgb1);
+                document.body.style.backgroundImage  = `linear-gradient(to right , ${rgb1}, ${rgb2})`;
+                copyDiv.innerHTML = `background-image : linear-gradient(to right , ${rgb1} , ${rgb2})`;
+                btn1.innerText = `${rgb1}`;
+            };
+
+            
+            const handlebtn2 = () => {
+                rgb2 = hexcolor();
+                console.log(rgb2);
+                document.body.style.backgroundImage  = `linear-gradient(to right ,  ${rgb1} , ${rgb2})`;
+                copyDiv.innerHTML = `background-image : linear-gradient(to right , ${rgb1} , ${rgb2})`;
+                btn2.innerText = `${rgb2}`;
+            };
+
+
+            btn1.addEventListener('click' , handlebtn1);
+            btn2.addEventListener('click' , handlebtn2);
+
+            let copyBtn = document.querySelector('.bton');
+
+            copyBtn.addEventListener('click' , () => {
+                navigator.clipboard.writeText(copyDiv.innerText);
+                alert(`copied`);
+            });
+
+            // changing these colors codes in html file too
+            // document.querySelector(
+            //     ".btn1"
+            // ).textContent = `${event.target.value}`;
+
+        </script>
+    
     </body>
 </html>
