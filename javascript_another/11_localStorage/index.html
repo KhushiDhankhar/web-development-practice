@@ -77,6 +77,22 @@
         localStorage.setItem("objectData" , JSON.stringify(studentBioData) );
     };
 
+    // Get from Local Storage
+    const getTodoList = ()=> {
+        const retrievedStudentData = JSON.parse(
+            localStorage.getItem("objectData")
+        );
+        console.log("Retrieved from Local Storage:", retrievedStudentData);
+    };
+
+    // Remove from Local Storage
+    const removeTodoList = () =>{
+        localStorage.removeItem("objectData");
+        // Verify removal
+        const removedData = localStorage.getItem("objectData");
+        console.log("Data after removal:", removedData);
+    }
+
     document.getElementById("addBtn").addEventListener("click", ()=> {
         addTodoList();
     });
