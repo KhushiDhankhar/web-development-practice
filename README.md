@@ -132,6 +132,8 @@ The `javascript_another` folder contains my JavaScript learning and practice.
 
 A small project for experimenting with CSS gradients and JavaScript interactions.
 
+**Deployed Website Link : https://colourwave.vercel.app/**
+
 **Concepts used:**
 
 * HTML
@@ -146,6 +148,8 @@ A small project for experimenting with CSS gradients and JavaScript interactions
 
 A simple Todo application built while learning JavaScript DOM manipulation.
 
+**Deployed Website Link : https://todo-nestk.vercel.app/** 
+
 **Concepts used:**
 
 * DOM Manipulation
@@ -153,6 +157,7 @@ A simple Todo application built while learning JavaScript DOM manipulation.
 * Input Handling
 * Dynamic Element Creation
 * CSS Styling
+* Local storage
 
 ---
 
