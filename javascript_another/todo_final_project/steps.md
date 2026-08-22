@@ -24,3 +24,23 @@ input value and a delete button.
 using 'localStorage.setItem'.
 
 ## 5. Get Todo from Local Storage
+- Create a function (e.g., 'getTodoListFromLocal') to retrieve todo data from
+Local Storage using 'localStorage.getItem.
+- Use 'JSON.parse' to convert the stored string into an array.
+
+## 6. Show Todos
+
+- Create a function (e.g., 'showTodoList') to display todos on page load.
+- Retrieve todo data from Local Storage using getTodoListFromLocal'.
+- Iterate through the array and dynamically add todos to the container.
+
+## 7. Remove Todo Function
+- Create a function (e.g., removeTodo ) to handle removing a todo.
+- Use event delegation by adding a click event listener to the container ( mainTodoElem).
+- Check if the clicked element has a class of "deleteBtn" and call the removeTodo' function.
+
+## 8. Update Local Storage on Remove
+
+- In the 'removeTodo' function, update the 'localTodoLists' array by filtering out the removed
+todo.
+- Update Local Storage using 'localStorage.setItem`.
