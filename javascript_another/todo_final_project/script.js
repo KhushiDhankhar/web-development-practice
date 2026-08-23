@@ -1,14 +1,33 @@
 const mainTodoElem = document.querySelector('.todo-lists-elem');
 const inputValue = document.getElementById('inputValue');
 
+// --- Safe localStorage wrappers ---
+// On some deployed hosts (sandboxed preview iframes, browsers with strict
+// privacy/storage settings, etc.) localStorage.getItem/setItem can THROW
+// instead of just failing quietly. If that happens at the top of the file,
+// the whole script stops running and none of the buttons work at all.
+// Wrapping in try/catch means the app still works (just without saving)
+// instead of silently breaking.
 
 const getTodoListFromLocal = () => {
-    return JSON.parse(localStorage.getItem("youtubeTodoList"));
+    try {
+        const data = localStorage.getItem("youtubeTodoList");
+        return data ? JSON.parse(data) : [];
+    } catch (err) {
+        console.warn("localStorage read failed, continuing without saved data:", err);
+        return [];
+    }
 };
 
-const addTodoListLocalStorage = () =>{
-    return localStorage.setItem('youtubeTodoList' ,localTodoLists );
+
+const addTodoListLocalStorage = () => {
+    try {
+        localStorage.setItem('youtubeTodoList', JSON.stringify(localTodoLists));
+    } catch (err) {
+        console.warn("localStorage save failed:", err);
+    }
 };
+
 
 let localTodoLists = getTodoListFromLocal() || [];
 
@@ -53,25 +72,21 @@ const showTodoList = () => {
 
 showTodoList();
 
-//remove data
+// remove data
 const removeTodoElem = (e) => {
-    console.log(e.target);
     const todoToRemove = e.target;
-    let todoListContent = todoToRemove.previousElementSibling.innerText;
-    console.log(todoListContent);
-
+ 
+    // Only act when a delete button was actually clicked, not any click
+    // inside the list container.
+    if (!todoToRemove.classList.contains("deletebtn")) return;
+ 
+    let todoListContent = todoToRemove.previousElementSibling.innerText.trim();
     let parentElem = todoToRemove.parentElement;
-
-    localTodoLists = localTodoLists.filter((curTodo) => {
-        console.log(curTodo);
-        return curTodo != todoListContent;
-    });
-
-    addTodoListLocalStorage(localTodoLists);
+ 
+    localTodoLists = localTodoLists.filter((curTodo) => curTodo != todoListContent);
+ 
+    addTodoListLocalStorage();
     parentElem.remove();
-
-    console.log(localTodoLists);
-
 };
 
 

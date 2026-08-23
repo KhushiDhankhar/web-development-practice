@@ -120,3 +120,50 @@ section{
 
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
+
+
+/* ---- Responsiveness ---- */
+ 
+@media (max-width: 768px) {
+    h1 {
+        font-size: 34px;
+        margin-bottom: 25px;
+    }
+ 
+    .todo-container {
+        width: 100%;
+        padding: 25px;
+        min-height: auto;
+    }
+ 
+    input,
+    button {
+        font-size: 17px;
+        height: 48px;
+    }
+}
+ 
+@media (max-width: 480px) {
+    h1 {
+        font-size: 26px;
+    }
+ 
+    .input-container {
+        flex-direction: column;
+    }
+ 
+    .btn {
+        width: 100%;
+    }
+ 
+    .main_todo_div {
+        flex-wrap: wrap;
+    }
+ 
+    .deletebtn {
+        width: 80px;
+        height: 36px;
+        font-size: 14px;
+    }
+}
+ 
