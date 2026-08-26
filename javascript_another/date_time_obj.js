@@ -54,3 +54,33 @@
     // console.log(date2);
 
 // 5: new Date(year, month, day, hours): Creates a Date object with the specified y
+    const date1 = new Date(2026, 7, 26, 10);
+    console.log(date1);
+
+// 6. new Date(year, month, day, hours, minutes)
+
+const date2 = new Date(2026, 7, 26, 10, 30);
+
+console.log(date2);
+
+// 3. new Date(year, month, day, hours, minutes, seconds)
+
+const date3 = new Date(2026, 7, 26, 10, 30, 45);
+
+console.log(date3);
+
+// 4. new Date(year, month, day, hours, minutes, seconds, milliseconds)
+
+const date4 = new Date(2026, 7, 26, 10, 30, 45, 500);
+
+console.log(date4);
+
+// 5. new Date(milliseconds)
+
+const date5 = new Date(0);
+
+console.log(date5);
+
+const date6 = new Date(1000000000);
+
+console.log(date6);
