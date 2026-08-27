@@ -36,7 +36,7 @@ const addTodoDynamicElement = (todo) => {
 
     const divElem = document.createElement("div");
     divElem.classList.add("main_todo_div");
-    divElem.innerHTML = `<li> ${todo} </li> <button class = "deletebtn"> Delete </button>`;
+    divElem.innerHTML = `<li> ${todo} </li> <button type = "button" class = "deletebtn"> Delete </button>`;
     mainTodoElem.append(divElem);
 
 };
@@ -45,6 +45,14 @@ const addTodoList = (e) => {
     e.preventDefault(); // to prevent submission
     
     let todoListValue = inputValue.value.trim();
+
+    // // If input is empty, do absolutely nothing - added cuz when i press enter without writing anything my whole thing(list) got deleted
+
+    // if (todoListValue === "") {
+    //     return;
+    // }
+
+
     todoListValue = todoListValue.charAt(0).toUpperCase() + todoListValue.slice(1);
     
     inputValue.value = "";

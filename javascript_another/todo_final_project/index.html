@@ -13,7 +13,11 @@
         <form>
             <div>
                 <input type = "text" id = "inputValue" placeholder="Add a todo..." />
-                <button type="button" class = "btn" > Add Todo </button>
+                <button type = "submit" class = "btn" > Add Todo </button>
+                <!-- type = "submit"  treats it as submit form and trigger add to list -->
+
+                <!-- using this type = " button " at deletebtn cuz i dont want deletebtn to trigger when i press enter -->
+                
                 <!-- type="button" stops the browser treating this as a form
                     submit button on any edge case where preventDefault
                     doesn't fire before the default action -->
