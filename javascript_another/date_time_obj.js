@@ -27,8 +27,8 @@
 // 1. new Date(): Creates a Date object representing the current date and time.
 
     console.log("using new Date() : ");
-    const currentDate = new Date();
-    console.log(currentDate);
+    const currentDate1 = new Date();
+    console.log(currentDate1);
     console.log();
 
 //todo This is the ISO 8601 format, which is a standard for representing dates and times.
@@ -91,17 +91,41 @@
     console.log(date6);
     console.log();
 
-// 9. new Date(milliseconds)
+// 9. new Date(milliseconds) : Creates a Date object
+// representing the number of milliseconds since the Unix
+// epoch (January· 1,1970, 00:00:00 UTC).
 
-    console.log();
-    const date7 = new Date(0);
+    console.log("getting the date and time for starting");
+    const date7 = new Date(0);  // Thu Jan 01 1970 05:30:00 GMT+0530 (India Standard Time)
     console.log(date7);
-    console.log();
+    console.log(); 
 
-    console.log();
+    console.log("getting date and time from milliseconds");
     const date8 = new Date(1000000000);
     console.log(date8);
     console.log();
+
+    console.log("getting date and time from currmilliseconds");
+    const currmilliseconds = new Date().getTime();
+    const date9 = new Date(currmilliseconds);
+    console.log(date9);
+    console.log();
+
+
+    /*
+        FINDING CURMILLISECONDS
+
+        const curMilliSeconds = new Date();
+            undefined
+        curMilliSeconds
+            Fri Aug 28 2026 18:55:56 GMT+0530 (India Standard Time)
+        const curMilliSeconds = new Date().getTime();
+            undefined
+        customElements
+            CustomElementRegistry {}[[Prototype]]: CustomElementRegistry
+        curMilliSeconds
+            1787923683846
+    */
 
     /*
         const date3 = new Date(2026, 13, 8);
@@ -114,3 +138,40 @@
                                           1 - 13 - 25 are feb ...so on
 
     */
+
+                                          
+// todo Note:
+// 1: JavaScript. counts.months. from 0 to 11:
+// January = 0, December = 11
+
+// 2: JavaScript Stores Dates as Milliseconds: JavaScript stores dates as number of
+// milliseconds since January 01, 1970.
+
+// Date String Format: If the dateString is in a recognizable format, the Date object will
+// be created accordingly.
+// new Date(date string) creates a date object from a date string
+// const date1 = new Date("2024-01-05"); // Year-Month-Day
+// const date2 = new Date("January 5, 2024"); // Month Day, Year
+// console.log(date1);
+// console.log(date2);
+
+
+/*
+    JavaScript Get Date Methods / Getting Components:
+*/
+
+// You can get various components of a date using the methods of the Date object:
+const currentDate = new Date();
+// In a date object, the time is static.
+const year = currentDate.getFullYear();
+const month = currentDate.getMonth(); // 0-based index
+const date = currentDate.getDate();
+const day = currentDate.getDay();
+// In JavaScript, the first day of the week (day 0) is Sunday.
+// day of the week (0 for Sunday, 1 for Monday, ... , 6 for Saturday)
+
+console.log(year);
+console.log(month);
+console.log(date);
+console.log(day);
+
