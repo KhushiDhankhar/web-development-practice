@@ -175,3 +175,60 @@ console.log(month);
 console.log(date);
 console.log(day);
 
+
+//JavaScript Set Date Methods / Setting Components:
+
+const dater = new Date();
+console.log(dater);
+
+// setFullYear(yearValue[, monthValue[, dayValue]]):
+// Sets the full year for a specified date according to
+// local time.
+dater.setFullYear(2025);
+console.log(dater); // Date object with the year set to
+2025
+
+// setMonth(monthValue[, dayValue]): Sets the month
+// for a specified date according to local time.
+dater.setMonth(5); // June (months are zero-based)
+console.log(dater); // Date object with the month set
+
+//setDate(dayValue): Sets the day of the month for a
+// specified date according to local time.
+dater.setDate(15);
+console.log(dater);
+// Date object with the day of the month set to 15
+
+
+// JavaScript Get Time Methods / Getting Components:
+
+const currentTime = new Date();
+console.log(`current time : ${currentTime}`);
+
+const hours = currentTime.getHours();
+console.log(`current hours : ${hours}`);
+
+const minutes = currentTime.getMinutes();
+console.log(`current minutes : ${minutes}`);
+
+const seconds = currentTime.getSeconds();
+console.log(`current seconds : ${seconds}`);
+
+const time = currentTime.getTime(); // in milliseconds
+console.log(time);
+
+// JavaScript Set Time Methods / Getting Components:
+
+// const date = new Date();
+
+// setHours(hourValue[, minuteValue[, secondValue[,
+// millisecondValue]]]): Sets the hours for a specified
+// date according to local time.
+
+date.setHours(10);
+console.log(date); // Date object with the hours set to 10
+
+// setMinutes(minuteValue[, secondValue[,millisecondValue]]): Sets the minutes for a specified
+// date according to local time.
+
+date.setMinutes(30);
