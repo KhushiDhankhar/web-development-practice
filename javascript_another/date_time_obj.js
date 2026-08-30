@@ -215,20 +215,67 @@ const seconds = currentTime.getSeconds();
 console.log(`current seconds : ${seconds}`);
 
 const time = currentTime.getTime(); // in milliseconds
-console.log(time);
+console.log(`current time in milliseconds : ${time}`);
 
 // JavaScript Set Time Methods / Getting Components:
 
-// const date = new Date();
+const datex = new Date();
 
 // setHours(hourValue[, minuteValue[, secondValue[,
 // millisecondValue]]]): Sets the hours for a specified
 // date according to local time.
 
-date.setHours(10);
-console.log(date); // Date object with the hours set to 10
+datex.setHours(10);
+console.log(`updated time obj of hours with 10 : ${datex}`); // Date object with the hours set to 10
 
 // setMinutes(minuteValue[, secondValue[,millisecondValue]]): Sets the minutes for a specified
 // date according to local time.
 
-date.setMinutes(30);
+datex.setMinutes(30);
+console.log(`updated time obj of minutes with 30 : ${datex}`);
+
+// setMilliseconds(millisecondValue): Sets the
+// milliseconds for a specified date according to local
+// time.
+
+datex.setMilliseconds(500);
+console.log(`updated time obj of milliseconds with 500 : ${datex}`); // Date object with the milliseconds set to 500
+
+// setTime(timeValue): Sets the Date object to the
+// time represented by a number of milliseconds since
+// January 1, 1970, 00:00:00 UTC.
+
+datex.setTime(1632090690883);
+console.log(`updated time obj by setting milliseconds to 1632090690883 : ${datex}`); // date obj representing specified time 
+
+datex.setTime(1832090690883);
+console.log(`updated time obj by setting milliseconds to 1832090690883 : ${datex}`); // date obj representing specified time 
+
+
+// A few useful methods of the Date object in JavaScript
+
+
+// 1: toLocaleString(): Returns a string representing the date and time portion of a Date
+// object using the current locale's conventions.
+ const date_y = new Date();
+ const localString = date_y.toLocaleString();
+ console.log(localString); // Example output: "2/19/2024, 4:30:00 PM" (depending on the locale)
+
+// 2: toLocaleDateString(): Returns a string representing the date portion of a Date
+// object using the current locale's conventions.
+
+const datez = new Date();
+const localDateString = datez.toLocaleDateString();
+console.log(localDateString); // Example output: "2/19/2024" (depending on the locale0
+
+// 3: toLocaleTimeString(): Returns a string representing the time portion of a Date
+// object using the current locale's conventions.
+const datef = new Date();
+const localTimeString = datef.toLocaleTimeString();
+console.log(localTimeString); // Example output: "4:30:00 PM" (depending on the locale)
+
+// 5: parse(): Parses a string representation of a date and returns the number of
+// milliseconds since January 1, 1970, 00:00:00 UTC.
+const dateString2 = "2024-02-19T16:30:00Z";
+const parsedDate = Date.parse(dateString2);
+console.log(parsedDate); // Example output: 1703254200000 (milliseconds)
