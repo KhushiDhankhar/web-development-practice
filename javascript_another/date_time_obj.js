@@ -279,3 +279,22 @@ console.log(localTimeString); // Example output: "4:30:00 PM" (depending on the 
 const dateString2 = "2024-02-19T16:30:00Z";
 const parsedDate = Date.parse(dateString2);
 console.log(parsedDate); // Example output: 1703254200000 (milliseconds)
+
+//*
+
+/*
+
+//*
+
+//* Bonus
+
+let newDate = new Date();
+// console.log(Date.now());
+// console.log(newDate.getTime());
+
+//? Date.now() is a static method of the Date object.
+//? Use Date.now() if you want the timestamp right this second.
+//? It returns the current timestamp (number of milliseconds) representing the currer
+moment.
+/Use new Date().getTime() if you have an existing Date object from elsewhere and
+timestamp.
