@@ -254,7 +254,6 @@ console.log(`updated time obj by setting milliseconds to 1832090690883 : ${datex
 
 // A few useful methods of the Date object in JavaScript
 
-
 // 1: toLocaleString(): Returns a string representing the date and time portion of a Date
 // object using the current locale's conventions.
  const date_y = new Date();
@@ -280,21 +279,43 @@ const dateString2 = "2024-02-19T16:30:00Z";
 const parsedDate = Date.parse(dateString2);
 console.log(parsedDate); // Example output: 1703254200000 (milliseconds)
 
-//*
+// Bonus
 
-/*
+//method 1 
+console.log(Date.now());
 
-//*
-
-//* Bonus
-
+// method 2 
 let newDate = new Date();
-// console.log(Date.now());
-// console.log(newDate.getTime());
+console.log(newDate.getTime());
 
-//? Date.now() is a static method of the Date object.
-//? Use Date.now() if you want the timestamp right this second.
-//? It returns the current timestamp (number of milliseconds) representing the currer
-moment.
-/Use new Date().getTime() if you have an existing Date object from elsewhere and
-timestamp.
+// same output in milliseconds for both methods 
+
+// Date.now() is a static method of the Date object.
+// Use Date.now() if you want the timestamp right this second.
+// It returns the current timestamp (number of milliseconds) representing the current moment.
+// Use new Date().getTime() // if you have an existing Date object from elsewhere and its timestamp.
+
+// Interview Questions
+
+// 1: write a function to add a specified number of days to a given date.
+
+const addDaysToDate = (date , extraDay) => {
+    console.log(date);
+    let d = new Date(date);
+    let new_date = date.setDate(d.getDate() + extraDay);
+    console.log(new_date);
+    let datee = new Date(new_date);
+    console.log(datee);
+    console.log(`old date : ${d.toLocaleDateString()} , after ${extraDay} => , new Date : ${datee.toLocaleDateString()}`);
+}
+
+// Example usage:
+const dateh = new Date("2024-02-29");
+const newDateh = addDaysToDate(dateh, 7);
+
+// console.log(newDate.toLocaleDateString());
+
+// Question: Write a function to calculate the difference in days between two given dates
+
+// Example usage:
+
