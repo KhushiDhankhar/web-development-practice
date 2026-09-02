@@ -101,6 +101,8 @@ The `javascript_another` folder contains my JavaScript learning and practice.
 * Arrays
 * Strings
 * Math Methods
+* Date and Time objects 
+* Local storage
 
 ### DOM & BOM
 
