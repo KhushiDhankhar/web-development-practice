@@ -307,15 +307,27 @@ const addDaysToDate = (date , extraDay) => {
     let datee = new Date(new_date);
     console.log(datee);
     console.log(`old date : ${d.toLocaleDateString()} , after ${extraDay} => , new Date : ${datee.toLocaleDateString()}`);
+    return datee;
 }
 
 // Example usage:
 const dateh = new Date("2024-02-29");
 const newDateh = addDaysToDate(dateh, 7);
-
-// console.log(newDate.toLocaleDateString());
+console.log(newDate.toLocaleDateString());
 
 // Question: Write a function to calculate the difference in days between two given dates
 
+const getDaysDifference = (d1 , d2) =>{
+    var oneDay = Date.parse("1970-01-02"); // get milliseconds of 1 day bcz starting is from 1 jan 1970
+    var diff = Math.abs(d2 - d1); // give diff in milliseconds
+   // console.log( diff );
+    return Math.round(diff / oneDay); // give no. of days
+
+}
+
 // Example usage:
+const date11 = new Date("2024-02-19");
+const date22 = new Date("2024-03-01");
+console.log(getDaysDifference(date11, date22)); // Output: 11 (difference in days)
+
 
