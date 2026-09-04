@@ -119,6 +119,7 @@ The `javascript_another` folder contains my JavaScript learning and practice.
 * Keyboard Events
 * Input Events
 * Event Handling
+* Timing based events
 
 ### Browser Storage
 
