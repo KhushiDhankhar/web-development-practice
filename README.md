@@ -163,6 +163,22 @@ A simple Todo application built while learning JavaScript DOM manipulation.
 * Local storage
 
 ---
+## Clock project 
+
+A simple clock application built while learning JavaScript DOM manipulation and time events.
+
+**Deployed Website Link :** 
+
+**Concepts used:**
+
+* HTML
+* CSS
+* Flexbox
+* Responsive Design
+* Page Layout
+* DOM Manipulation
+* JavaScript Events
+* Timing events 
 
 ## 💼 Portfolio Website
 
