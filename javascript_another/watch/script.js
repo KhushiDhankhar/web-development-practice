@@ -4,3 +4,7 @@ const currentTime = () => {
 };
 
 currentTime();
+
+setInterval ( () => {
+    currentTime();
+} , 1000);
