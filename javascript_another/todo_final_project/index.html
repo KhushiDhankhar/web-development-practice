@@ -8,27 +8,38 @@
     </head>
 
     <body>
+       <div class="container">
+
         <h1>Todo List App</h1>
-        <br>
-        <form>
-            <div>
-                <input type = "text" id = "inputValue" placeholder="Add a todo..." />
-                <button type = "submit" class = "btn" > Add Todo </button>
-                <!-- type = "submit"  treats it as submit form and trigger add to list -->
 
-                <!-- using this type = " button " at deletebtn cuz i dont want deletebtn to trigger when i press enter -->
-                
-                <!-- type="button" stops the browser treating this as a form
-                    submit button on any edge case where preventDefault
-                    doesn't fire before the default action -->
+        <div class="input-box">
+            <input
+                type="text"
+                id="todoInput"
+                placeholder="Add a todo..."
+            >
+            <button type="button" id="addBtn">Add Todo</button>
+        </div>
 
-            </div>
+        <div class="filters">
+            <button class="filter active" data-filter="all">All</button>
+            <button class="filter" data-filter="active">Active</button>
+            <button class="filter" data-filter="completed">Completed</button>
+        </div>
 
-            <section class = "todo-lists-elem"></section>
-        </form>
+        <ul id="todoList"></ul>
+
+        <div class="bottom">
+            <span id="taskCount">0 tasks remaining</span>
+            <button type="button" id="clearCompleted">
+                Clear completed
+            </button>
+        </div>
+
+    </div>
         
-        <!-- external js -->
-        <script src = "script.js"></script>
+    <!-- external js -->
+    <script src = "script.js"></script>
 
     </body>
 </html>
